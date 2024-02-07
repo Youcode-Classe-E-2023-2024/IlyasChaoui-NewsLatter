@@ -1,3 +1,39 @@
+<!-- ====== Banner Section Start -->
+<div class="relative z-10 overflow-hidden pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px] dark:bg-dark">
+    <div
+        class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke dark:via-dark-3 to-stroke/0">
+    </div>
+    <div class="container">
+        <div class="flex flex-wrap items-center -mx-4">
+            <div class="w-full px-4">
+                <div class="text-center">
+                    <h1 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+                        Sign In Page</h1>
+                    <p class="mb-5 text-base text-body-color dark:text-dark-6">
+                        There are many variations of passages of Lorem Ipsum available.
+                    </p>
+
+                    <ul class="flex items-center justify-center gap-[10px]">
+                        <li>
+                            <a href="/"
+                               class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                               class="flex items-center gap-[10px] text-base font-medium text-body-color">
+                                <span class="text-body-color dark:text-dark-6"> / </span>
+                                Sign In
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====== Banner Section End -->
 <section class="bg-[#F4F7FF] py-14 lg:py-[90px] dark:bg-dark">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
@@ -7,9 +43,16 @@
                     data-wow-delay=".15s">
                     <div class="mb-10 text-center">
                         <a href="javascript:void(0)" class="mx-auto inline-block max-w-[160px]">
-                            <img src="assets/images/logo/logo.svg" alt="logo" class="dark:hidden"/>
-                            <img src="assets/images/logo/logo-white.svg" alt="logo" class="hidden dark:block"/>
+                            <h1 class="text-4xl mb-4 dark:text-white font-bold">Login</h1>
+
                         </a>
+                        <!-- Display Status Message Here -->
+                        @if (session('status'))
+                            <div class="mb-4 rounded-[10px] alert-simple alert-success text-left font__family-montserrat font__size-16 font__weight-light rendered show">
+                                <i class="start-icon fa fa-check-circle faa-pulse animated"></i>
+                                <strong class="font__weight-semibold">{{ session('status') }}</strong>
+                            </div>
+                        @endif
                     </div>
                     <form action="{{ route('Auth.loginTrait') }}" method="post">
                         @csrf
@@ -48,8 +91,8 @@
                                 class="w-full mb-9 px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer border-primary bg-primary hover:bg-blue-dark">
                             Sign In
                         </button>
+                        <a href="/forgetPassword">Forget Password ?</a>
                     </form>
-
                     <span class="relative block text-center z-1 mb-7">
               <span class="absolute left-0 block w-full h-px -z-1 top-1/2 bg-stroke dark:bg-dark-3"></span>
               <span class="relative z-10 inline-block px-3 text-base bg-white dark:bg-dark-2 text-body-secondary">Connect With</span>
