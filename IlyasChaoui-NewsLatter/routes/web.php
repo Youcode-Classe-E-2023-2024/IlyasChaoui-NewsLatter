@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\ForgetPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +27,10 @@ Route::post('/register', [RegisterController::class, 'store'])->name('Auth.regis
 Route::get('/login', [LoginController::class, 'show'])->name('Auth.login');
 Route::post('/login', [LoginController::class, 'login'])->name('Auth.loginTrait');
 
+Route::get('/forgetPassword', [ForgetPasswordController::class, 'show'])->name('Auth.forgetPassword');
+Route::post('/forgetPassword', [ForgetPasswordController::class, 'store'])->name('Auth.forgetPasswordTrait');
+//
+Route::get('/password/reset/{token}', [ResetPasswordController::class, 'show'])->name('password.reset');
+Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+//
 Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth');
