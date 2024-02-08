@@ -8,17 +8,19 @@
     <title>
         NewsLetter | @yield('title')
     </title>
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/assets/images/logo/logo-uiverse.png" type="image/x-icon"/>
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/assets/css/animate.css"/>
     <link rel="stylesheet" href="/assets/css/style.css"/>
     <link rel="stylesheet" href="/assets/css/tailwind.css"/>
-
     <!-- ==== WOW JS ==== -->
     <script src="/assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
+    <style>
+
+    </style>
 </head>
 <body>
 
