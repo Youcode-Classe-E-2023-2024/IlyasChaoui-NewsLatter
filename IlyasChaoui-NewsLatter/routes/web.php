@@ -33,4 +33,4 @@ Route::post('/forgetPassword', [ForgetPasswordController::class, 'store'])->name
 Route::get('/password/reset/{token}', [ResetPasswordController::class, 'show'])->name('password.reset');
 Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 //
-Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth');
+Route::post('/logout', [LoginController::class, 'destroy']);
