@@ -51,26 +51,27 @@
 
                         <div class="mb-[22px]">
 
-                        <div class="mb-[22px]">
-                            <input type="email" placeholder="Email" name="email" value="{{ old('email') }}"
-                                   class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
-                            @error('email')
-                            <div class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert">
-                                <button type="button" class="close font__size-18" data-dismiss="alert">
-                                    <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
-                                    <span class="sr-only">Close</span>
-                                </button>
-                                <i class="start-icon far fa-times-circle faa-pulse animated"></i>
-                                <strong class="font__weight-semibold text-lg">Oh snap!</strong> {{ $message }}
+                            <div class="mb-[22px]">
+                                <input type="email" placeholder="Email" name="email" value="{{ old('email') }}"
+                                       class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
+                                @error('email')
+                                <div
+                                    class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                    role="alert">
+                                    <button type="button" class="close font__size-18" data-dismiss="alert">
+                                        <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+                                    <strong class="font__weight-semibold text-lg">Oh snap!</strong> {{ $message }}
+                                </div>
+                                @enderror
                             </div>
-                            @enderror
-                        </div>
-                        <button type="submit"
-                                class="w-full mb-9 px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer border-primary bg-primary hover:bg-blue-dark">
-                            Send
-                        </button>
+                            <button type="submit"
+                                    class="w-full mb-9 px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer border-primary bg-primary hover:bg-blue-dark">
+                                Send
+                            </button>
                     </form>
-
                     <p class="text-base text-body-secondary">
                         Already have an account?
                         <a href="/login" class="text-primary hover:underline">
