@@ -22,8 +22,8 @@ Developing a robust web platform for a marketing company, integrating advanced f
 5. **Serve**: `php artisan serve`
 
 ## Modelization
-1. **Use case**: [use_case.pdf](https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter/files/14208237/use_case.pdf)
-2. **Class Diagram**: [classe.pdf](https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter/files/14208239/classe.pdf)
+1. **Use case**: [use case.pdf](https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter/files/14209602/use.case.pdf)
+2. **Class Diagram**: [class diagram.pdf](https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter/files/14209605/class.diagram.pdf)
 
 ## Usage
 Operate the platform through its web interface for newsletter management, media uploads, and report generation.
