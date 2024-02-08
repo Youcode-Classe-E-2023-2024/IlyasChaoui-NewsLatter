@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="1f3e8244-c6fd-451e-87ca-e9e42dedaaac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/Modélisation/classe.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/Modélisation/use_case.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Auth/authentication.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Auth/authentication.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/forget-password-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/forget-password-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/login-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/login-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/routes/web.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/IlyasChaoui-NewsLatter/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/symfony/polyfill-intl-idn" />
@@ -147,35 +116,12 @@
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/symfony/console" />
     </include_path>
   </component>
-  <component name="ProjectId" id="2c00dBFRSxeEZLxU7LiNd2naaW2" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/Laravel project/IlyasChaoui-NewsLatter/IlyasChaoui-NewsLatter",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1f3e8244-c6fd-451e-87ca-e9e42dedaaac" name="Changes" comment="" />
-      <created>1707233274177</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1707233274177</updated>
-      <workItem from="1707233275945" duration="52000" />
-      <workItem from="1707400020382" duration="136000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>
