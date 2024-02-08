@@ -5,7 +5,7 @@
             <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
                 <div class="mb-10 w-full">
                     <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
-                        <img src="assets/images/logo/logo-white.svg" alt="logo" class="max-w-full"/>
+                        <img src="assets/images/logo/logo-white.svg.png" alt="logo" class="max-w-full"/>
                     </a>
                     <p class="mb-8 max-w-[270px] text-base text-gray-7">
                         We create digital experiences for brands and companies by using
