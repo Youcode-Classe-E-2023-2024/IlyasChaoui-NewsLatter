@@ -15,7 +15,7 @@ Developing a robust web platform for a marketing company, integrating advanced f
 - **Laravel**, **Spatie Newsletter**, **Spatie Media Library**, and tools for PDF generation.
 
 ## Setup
-1. **Clone**: git clone https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter`
+1. **Clone**: `git clone https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter`
 2. **Install Dependencies**: `composer install`
 3. **Configure**: Set `.env` for database and mail.
 4. **Migrate & Seed**: `php artisan migrate` & `php artisan db:seed`
