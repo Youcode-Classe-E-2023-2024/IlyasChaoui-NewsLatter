@@ -91,7 +91,31 @@
                                 class="w-full mb-9 px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer border-primary bg-primary hover:bg-blue-dark">
                             Sign In
                         </button>
-                        <a href="/forgetPassword">Forget Password ?</a>
+                        <div class="flex justify-between mb-4">
+                            <div class="flex">
+                                <div class="checkbox-wrapper-12">
+                                    <div class="cbx">
+                                        <input id="remember" name="remember" type="checkbox">
+                                        <label for="remember"></label>
+                                        <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                                            <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                        </svg>
+                                    </div>
+
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <filter id="goo-12">
+                                                <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                                                <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                                                <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <a class="ml-2 text-md" href="/forgetPassword">Remember me</a>
+                            </div>
+                            <a class="text-md" href="/forgetPassword">Forget Password ?</a>
+                        </div>
                     </form>
                     <span class="relative block text-center z-1 mb-7">
               <span class="absolute left-0 block w-full h-px -z-1 top-1/2 bg-stroke dark:bg-dark-3"></span>
