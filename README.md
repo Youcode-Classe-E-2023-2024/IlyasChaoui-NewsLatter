@@ -1,5 +1,7 @@
 # Web Platform Development with Laravel
 
+![Capture d'écran 2024-02-08 120345](https://github.com/Youcode-Classe-E-2023-2024/IlyasChaoui-NewsLatter/assets/144786151/4c23f66d-28af-4bf3-a23b-182ec0546573)
+
 ## Overview
 Developing a robust web platform for a marketing company, integrating advanced features like newsletter management (Spatie Newsletter), role-based authentication (policies and guards), password recovery, "remember me", media library (Spatie), soft delete, middleware, PDF generation, and database modeling for three roles: Administrator, Editor, Member.
 
