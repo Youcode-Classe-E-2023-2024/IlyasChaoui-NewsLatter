@@ -1,9 +1,5 @@
 @extends('layouts.header')
 
-@section('title')
-    Register
-@endsection
-
 @section('content')
 
     <!-- ====== Navbar Section Start -->
@@ -12,8 +8,8 @@
             <div class="relative flex items-center justify-between -mx-4">
                 <div class="max-w-full px-4 w-60">
                     <a href="/" class="block w-full py-5 navbar-logo">
-                        <img src="assets/images/logo/logo.svg" alt="logo" class="w-full dark:hidden"/>
-                        <img src="assets/images/logo/logo-white.svg" alt="logo" class="hidden w-full dark:block"/>
+                        <img src="assets/images/logo/logo.svg.png" alt="logo" class="w-full dark:hidden"/>
+                        <img src="assets/images/logo/logo-white.svg.png" alt="logo" class="hidden w-full dark:block"/>
                     </a>
                 </div>
                 <div class="flex items-center justify-between w-full px-4">
@@ -198,12 +194,24 @@
 
     <!-- ====== Forms Section Start -->
     @if(Request::url() === 'http://127.0.0.1:8000/register')
+        @section('title')
+            Register
+        @endsection
         <x-register-form/>
     @elseif(Request::url() === 'http://127.0.0.1:8000/login')
+        @section('title')
+            Login
+        @endsection
         <x-login-form/>
     @elseif(Request::url() === 'http://127.0.0.1:8000/forgetPassword')
+        @section('title')
+            Forget Password
+        @endsection
         <x-forget-password-form/>
     @else
+        @section('title')
+            Reset Password
+        @endsection
         <x-reset-password-form :token="$token"/>
     @endif
     <!-- ====== Forms Section End -->
