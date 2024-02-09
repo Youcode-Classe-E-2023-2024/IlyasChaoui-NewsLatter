@@ -7,9 +7,9 @@
 @section('content')
 
     <!-- ====== Hero Section Start -->
-    <div class="ag-maecenas-block">
-        <div class="ag-maecenas_title dark:fill-dark">
-            <div class="ag-format-container">
+    <div class="ag-maecenas-block dark:bg-dark">
+        <div class="ag-maecenas_title dark:bg-dark   ">
+            <div class="ag-format-container dark:text-black">
                 NewsLetter
             </div>
         </div>
@@ -40,22 +40,7 @@
                     </div>
                 </div>
             </div>
-            <form class="flex flex-row md:flex-row justify-center mb-[80px]" style="margin-bottom: 80px;">
-                <input type="email" placeholder="Enter your email address"
-                       class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0"/>
-
-                <button class="cssbuttons-io-button">
-                    Join us
-                    <div class="icon">
-                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                  fill="currentColor"></path>
-                        </svg>
-                    </div>
-                </button>
-
-            </form>
+            <x-email-newsletter-form/>
             <div class="-mx-4 flex flex-wrap">
                 <div class="w-full px-4 md:w-1/2 lg:w-1/4">
                     <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
