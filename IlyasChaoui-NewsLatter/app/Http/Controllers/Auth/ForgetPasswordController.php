@@ -39,7 +39,9 @@ class ForgetPasswordController extends Controller
      */
     public function show()
     {
-        return view('auth.authentication');
+        return response()
+            ->view('auth.authentication')
+            ->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     }
 
     /**
