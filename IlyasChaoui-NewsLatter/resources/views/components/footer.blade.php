@@ -5,7 +5,7 @@
             <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
                 <div class="mb-10 w-full">
                     <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
-                        <img src="assets/images/logo/logo-white.svg.png" alt="logo" class="max-w-full"/>
+                        <img src="assets-home/images/logo/logo-white.svg.png" alt="logo" class="max-w-full"/>
                     </a>
                     <p class="mb-8 max-w-[270px] text-base text-gray-7">
                         We create digital experiences for brands and companies by using
@@ -152,7 +152,7 @@
                     <div class="flex flex-col gap-8">
                         <a href="blog-details.html" class="group flex items-center gap-[22px]">
                             <div class="overflow-hidden rounded">
-                                <img src="./assets/images/blog/blog-footer-01.jpg" alt="blog"/>
+                                <img src="./assets-home/images/blog/blog-footer-01.jpg" alt="blog"/>
                             </div>
                             <span class="max-w-[180px] text-base text-gray-7 group-hover:text-white">
                   I think really important to design with...
@@ -160,7 +160,7 @@
                         </a>
                         <a href="blog-details.html" class="group flex items-center gap-[22px]">
                             <div class="overflow-hidden rounded">
-                                <img src="./assets/images/blog/blog-footer-02.jpg" alt="blog"/>
+                                <img src="./assets-home/images/blog/blog-footer-02.jpg" alt="blog"/>
                             </div>
                             <span class="max-w-[180px] text-base text-gray-7 group-hover:text-white">
                   Recognizing the need is the primary...
@@ -210,11 +210,11 @@
 
     <div>
       <span class="absolute left-0 top-0 z-[-1]">
-        <img src="assets/images/footer/shape-1.svg" alt=""/>
+        <img src="assets-home/images/footer/shape-1.svg" alt=""/>
       </span>
 
         <span class="absolute bottom-0 right-0 z-[-1]">
-        <img src="assets/images/footer/shape-3.svg" alt=""/>
+        <img src="assets-home/images/footer/shape-3.svg" alt=""/>
       </span>
 
         <span class="absolute right-0 top-0 z-[-1]">

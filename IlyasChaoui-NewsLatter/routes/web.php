@@ -34,3 +34,7 @@ Route::get('/password/reset/{token}', [ResetPasswordController::class, 'show'])-
 Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 //
 Route::post('/logout', [LoginController::class, 'destroy']);
+
+Route::get('/editor', function (){
+    return view('Editor.dashboard-editor');
+});

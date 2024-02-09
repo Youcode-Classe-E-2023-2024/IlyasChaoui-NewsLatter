@@ -8,13 +8,13 @@
     <title>
         NewsLetter | @yield('title')
     </title>
-    <link rel="shortcut icon" href="/assets/images/logo/logo-uiverse.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/assets/css/animate.css"/>
-    <link rel="stylesheet" href="/assets/css/style.css"/>
-    <link rel="stylesheet" href="/assets/css/tailwind.css"/>
+    <link rel="shortcut icon" href="/assets-home/images/logo/logo-uiverse.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets-home/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/assets-home/css/animate.css"/>
+    <link rel="stylesheet" href="/assets-home/css/style.css"/>
+    <link rel="stylesheet" href="/assets-home/css/tailwind.css"/>
     <!-- ==== WOW JS ==== -->
-    <script src="/assets/js/wow.min.js"></script>
+    <script src="/assets-home/js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
@@ -36,8 +36,8 @@
 
 <!-- ====== All Scripts -->
 
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets-home/js/swiper-bundle.min.js"></script>
+<script src="assets-home/js/main.js"></script>
 <script>
     // ==== for menu scroll
     const pageLink = document.querySelectorAll(".ud-menu-scroll");

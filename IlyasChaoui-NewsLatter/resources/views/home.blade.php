@@ -229,7 +229,7 @@
                         <div class="-mx-2 flex flex-wrap sm:-mx-4 lg:-mx-2 xl:-mx-4">
                             <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                                 <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
-                                    <img src="./assets/images/about/about-image-01.jpg" alt="about image"
+                                    <img src="./assets-home/images/about/about-image-01.jpg" alt="about image"
                                          class="h-full w-full object-cover object-center"/>
                                 </div>
                             </div>
@@ -237,7 +237,7 @@
                             <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                                 <div
                                     class="mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
-                                    <img src="./assets/images/about/about-image-02.jpg" alt="about image"
+                                    <img src="./assets-home/images/about/about-image-02.jpg" alt="about image"
                                          class="h-full w-full object-cover object-center"/>
                                 </div>
 
@@ -525,11 +525,11 @@
                             <div
                                 class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                                 <div class="mb-[18px] flex items-center gap-[2px]">
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
                                 </div>
 
                                 <p class="mb-6 text-base text-body-color dark:text-dark-6">
@@ -539,7 +539,7 @@
 
                                 <a href="#" class="flex items-center gap-4">
                                     <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
-                                        <img src="./assets/images/testimonials/author-01.jpg" alt="author"
+                                        <img src="./assets-home/images/testimonials/author-01.jpg" alt="author"
                                              class="h-[50px] w-[50px] overflow-hidden rounded-full"/>
                                     </div>
 
@@ -557,11 +557,11 @@
                             <div
                                 class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                                 <div class="mb-[18px] flex items-center gap-[2px]">
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
                                 </div>
 
                                 <p class="mb-6 text-base text-body-color dark:text-dark-6">
@@ -571,7 +571,7 @@
 
                                 <a href="#" class="flex items-center gap-4">
                                     <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
-                                        <img src="./assets/images/testimonials/author-02.jpg" alt="author"
+                                        <img src="./assets-home/images/testimonials/author-02.jpg" alt="author"
                                              class="h-[50px] w-[50px] overflow-hidden rounded-full"/>
                                     </div>
 
@@ -591,11 +591,11 @@
                             <div
                                 class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                                 <div class="mb-[18px] flex items-center gap-[2px]">
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
                                 </div>
 
                                 <p class="mb-6 text-base text-body-color dark:text-dark-6">
@@ -605,7 +605,7 @@
 
                                 <a href="#" class="flex items-center gap-4">
                                     <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
-                                        <img src="./assets/images/testimonials/author-03.jpg" alt="author"
+                                        <img src="./assets-home/images/testimonials/author-03.jpg" alt="author"
                                              class="h-[50px] w-[50px] overflow-hidden rounded-full"/>
                                     </div>
 
@@ -625,11 +625,11 @@
                             <div
                                 class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                                 <div class="mb-[18px] flex items-center gap-[2px]">
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
                                 </div>
 
                                 <p class="mb-6 text-base text-body-color dark:text-dark-6">
@@ -639,7 +639,7 @@
 
                                 <a href="#" class="flex items-center gap-4">
                                     <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
-                                        <img src="./assets/images/testimonials/author-01.jpg" alt="author"
+                                        <img src="./assets-home/images/testimonials/author-01.jpg" alt="author"
                                              class="h-[50px] w-[50px] overflow-hidden rounded-full"/>
                                     </div>
 
@@ -657,11 +657,11 @@
                             <div
                                 class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                                 <div class="mb-[18px] flex items-center gap-[2px]">
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
                                 </div>
 
                                 <p class="mb-6 text-base text-body-color dark:text-dark-6">
@@ -671,7 +671,7 @@
 
                                 <a href="#" class="flex items-center gap-4">
                                     <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
-                                        <img src="./assets/images/testimonials/author-02.jpg" alt="author"
+                                        <img src="./assets-home/images/testimonials/author-02.jpg" alt="author"
                                              class="h-[50px] w-[50px] overflow-hidden rounded-full"/>
                                     </div>
 
@@ -691,11 +691,11 @@
                             <div
                                 class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                                 <div class="mb-[18px] flex items-center gap-[2px]">
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
-                                    <img src="./assets/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
+                                    <img src="./assets-home/images/testimonials/icon-star.svg" alt="star icon"/>
                                 </div>
 
                                 <p class="mb-6 text-base text-body-color dark:text-dark-6">
@@ -705,7 +705,7 @@
 
                                 <a href="#" class="flex items-center gap-4">
                                     <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
-                                        <img src="./assets/images/testimonials/author-03.jpg" alt="author"
+                                        <img src="./assets-home/images/testimonials/author-03.jpg" alt="author"
                                              class="h-[50px] w-[50px] overflow-hidden rounded-full"/>
                                     </div>
 
@@ -984,7 +984,7 @@
                     <div
                         class="group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-dark dark:shadow-none">
                         <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                            <img src="./assets/images/team/team-01.png" alt="team image"
+                            <img src="./assets-home/images/team/team-01.png" alt="team image"
                                  class="h-[120px] w-[120px] rounded-full"/>
                             <span
                                 class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-secondary opacity-0 transition-all group-hover:opacity-100"></span>
@@ -1147,7 +1147,7 @@
                     <div
                         class="group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-dark dark:shadow-none">
                         <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                            <img src="https://cdn.tailgrids.com/1.0/assets/images/team/image-07/image-02.png"
+                            <img src="https://cdn.tailgrids.com/1.0/assets-home/images/team/image-07/image-02.png"
                                  alt="team image"
                                  class="h-[120px] w-[120px] rounded-full"/>
                             <span
@@ -1257,7 +1257,7 @@
                     <div
                         class="group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-dark dark:shadow-none">
                         <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                            <img src="https://cdn.tailgrids.com/1.0/assets/images/team/image-07/image-03.png"
+                            <img src="https://cdn.tailgrids.com/1.0/assets-home/images/team/image-07/image-03.png"
                                  alt="team image"
                                  class="h-[120px] w-[120px] rounded-full"/>
                             <span
@@ -1367,7 +1367,7 @@
                     <div
                         class="group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-dark dark:shadow-none">
                         <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                            <img src="https://cdn.tailgrids.com/1.0/assets/images/team/image-07/image-04.png"
+                            <img src="https://cdn.tailgrids.com/1.0/assets-home/images/team/image-07/image-04.png"
                                  alt="team image"
                                  class="h-[120px] w-[120px] rounded-full"/>
                             <span
@@ -1502,7 +1502,7 @@
                     <div class="wow fadeInUp group mb-10" data-wow-delay=".1s">
                         <div class="mb-8 overflow-hidden rounded-[5px]">
                             <a href="blog-details.html" class="block">
-                                <img src="./assets/images/blog/blog-01.jpg" alt="image"
+                                <img src="./assets-home/images/blog/blog-01.jpg" alt="image"
                                      class="w-full transition group-hover:rotate-6 group-hover:scale-125"/>
                             </a>
                         </div>
@@ -1528,7 +1528,7 @@
                     <div class="wow fadeInUp group mb-10" data-wow-delay=".15s">
                         <div class="mb-8 overflow-hidden rounded-[5px]">
                             <a href="blog-details.html" class="block">
-                                <img src="./assets/images/blog/blog-02.jpg" alt="image"
+                                <img src="./assets-home/images/blog/blog-02.jpg" alt="image"
                                      class="w-full transition group-hover:rotate-6 group-hover:scale-125"/>
                             </a>
                         </div>
@@ -1554,7 +1554,7 @@
                     <div class="wow fadeInUp group mb-10" data-wow-delay=".2s">
                         <div class="mb-8 overflow-hidden rounded-[5px]">
                             <a href="blog-details.html" class="block">
-                                <img src="./assets/images/blog/blog-03.jpg" alt="image"
+                                <img src="./assets-home/images/blog/blog-03.jpg" alt="image"
                                      class="w-full transition group-hover:rotate-6 group-hover:scale-125"/>
                             </a>
                         </div>
@@ -1689,24 +1689,24 @@
         <div class="container px-4">
             <div class="-mx-4 flex flex-wrap items-center justify-center gap-8 xl:gap-11">
                 <a href="https://graygrids.com/">
-                    <img src="./assets/images/brands/graygrids.svg" alt="graygrids" class="dark:hidden"/>
-                    <img src="./assets/images/brands/graygrids-white.svg" alt="graygrids" class="hidden dark:block"/>
+                    <img src="./assets-home/images/brands/graygrids.svg" alt="graygrids" class="dark:hidden"/>
+                    <img src="./assets-home/images/brands/graygrids-white.svg" alt="graygrids" class="hidden dark:block"/>
                 </a>
                 <a href="https://lineicons.com/">
-                    <img src="./assets/images/brands/lineicons.svg" alt="lineicons" class="dark:hidden"/>
-                    <img src="./assets/images/brands/lineicons-white.svg" alt="graygrids" class="hidden dark:block"/>
+                    <img src="./assets-home/images/brands/lineicons.svg" alt="lineicons" class="dark:hidden"/>
+                    <img src="./assets-home/images/brands/lineicons-white.svg" alt="graygrids" class="hidden dark:block"/>
                 </a>
                 <a href="https://uideck.com/">
-                    <img src="./assets/images/brands/uideck.svg" alt="uideck" class="dark:hidden"/>
-                    <img src="./assets/images/brands/uideck-white.svg" alt="graygrids" class="hidden dark:block"/>
+                    <img src="./assets-home/images/brands/uideck.svg" alt="uideck" class="dark:hidden"/>
+                    <img src="./assets-home/images/brands/uideck-white.svg" alt="graygrids" class="hidden dark:block"/>
                 </a>
                 <a href="https://ayroui.com/">
-                    <img src="./assets/images/brands/ayroui.svg" alt="ayroui" class="dark:hidden"/>
-                    <img src="./assets/images/brands/ayroui-white.svg" alt="graygrids" class="hidden dark:block"/>
+                    <img src="./assets-home/images/brands/ayroui.svg" alt="ayroui" class="dark:hidden"/>
+                    <img src="./assets-home/images/brands/ayroui-white.svg" alt="graygrids" class="hidden dark:block"/>
                 </a>
                 <a href="https://tailgrids.com/">
-                    <img src="./assets/images/brands/tailgrids.svg" alt="tailgrids" class="dark:hidden"/>
-                    <img src="./assets/images/brands/tailgrids-white.svg" alt="graygrids" class="hidden dark:block"/>
+                    <img src="./assets-home/images/brands/tailgrids.svg" alt="tailgrids" class="dark:hidden"/>
+                    <img src="./assets-home/images/brands/tailgrids-white.svg" alt="graygrids" class="hidden dark:block"/>
                 </a>
             </div>
         </div>
