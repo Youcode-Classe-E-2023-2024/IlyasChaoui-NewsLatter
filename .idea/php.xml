@@ -114,6 +114,7 @@
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/brick/math" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
