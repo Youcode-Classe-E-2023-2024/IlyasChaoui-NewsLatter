@@ -24,7 +24,9 @@ class RegisterController extends Controller
      */
     public function show()
     {
-        return view('auth.authentication');
+        return response()
+            ->view('auth.authentication')
+            ->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     }
 
     public function store(Request $request)
@@ -37,7 +39,7 @@ class RegisterController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
         ]);
-
+//dd($request);
         /*
         Database Insert
         */
