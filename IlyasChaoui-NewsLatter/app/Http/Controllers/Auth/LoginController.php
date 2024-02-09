@@ -50,7 +50,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($request->only('email', 'password'),$request->filled('remember'))) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('/dashboard');
         }
 
 
@@ -65,7 +65,9 @@ class LoginController extends Controller
      */
     public function show()
     {
-        return view('auth.authentication');
+        return response()
+            ->view('auth.authentication')
+            ->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     }
 
     /**
@@ -85,7 +87,6 @@ class LoginController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
         return redirect('/');
     }
 }
