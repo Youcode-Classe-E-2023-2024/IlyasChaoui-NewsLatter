@@ -8,8 +8,8 @@
             <div class="relative flex items-center justify-between -mx-4">
                 <div class="max-w-full px-4 w-60">
                     <a href="/" class="block w-full py-5 navbar-logo">
-                        <img src="assets/images/logo/logo.svg.png" alt="logo" class="w-full dark:hidden" />
-                        <img src="assets/images/logo/logo-white.svg.png" alt="logo" class="hidden w-full dark:block" />
+                        <img src="assets-home/images/logo/logo.svg.png" alt="logo" class="w-full dark:hidden" />
+                        <img src="assets-home/images/logo/logo-white.svg.png" alt="logo" class="hidden w-full dark:block" />
                     </a>
                 </div>
                 <div class="flex items-center justify-between w-full px-4">
