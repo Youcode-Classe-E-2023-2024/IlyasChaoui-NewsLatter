@@ -31,7 +31,10 @@ class ResetPasswordController extends Controller
      */
     public function show(Request $request ,$token)
     {
-        return view('Auth.authentication' , ['token' => $token]);
+        return response()
+            ->view('Auth.authentication' , ['token' => $token])
+            ->header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+
     }
 
     /**
