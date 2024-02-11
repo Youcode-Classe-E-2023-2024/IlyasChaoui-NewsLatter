@@ -46,14 +46,38 @@
                             <h1 class="text-4xl dark:text-white font-bold">Register</h1>
                         </a>
                     </div>
-                    <form action="{{ route('Auth.registerTrait') }}" method="post">
+                    <form action="{{ route('Auth.registerTrait') }}" method="post" enctype="multipart/form-data">
                         @csrf
-
                         <div class="mb-[22px]">
-                            <input type="text" placeholder="Name" name="name" value="{{ old('name') }}"
+                            <h1 class="font-semibold dark:text-white">Select an Profile Image</h1>
+                            <input class="login-input" name="picture" value="{{ old('picture') }}" type="file" accept="image/*" id="imageInput"
+                                   style="display: none">
+                            <!-- Circular image container -->
+                            <label for="imageInput" class="relative top-2 left-20 cursor-pointer flex justify-center">
+                                <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-300">
+                                    <img id="previewImage" style="width: 90px; height: 90px" src="/assets/img/photo.png"
+                                         alt="User Picture">
+                                </div>
+                            </label>
+                            @error('picture')
+                            <div
+                                class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                role="alert">
+                                <button type="button" class="close font__size-18" data-dismiss="alert">
+                                    <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
+                                    <span class="sr-only">Close</span>
+                                </button>
+                                <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+                                <strong class="font__weight-semibold">Oh snap!</strong> {{ $message }}
+                            </div>
+                            @enderror
+
+                            <input type="text" placeholder="Username" style="margin-top: 15px" name="name" value="{{ old('name') }}"
                                    class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
                             @error('name')
-                            <div class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert">
+                            <div
+                                class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                role="alert">
                                 <button type="button" class="close font__size-18" data-dismiss="alert">
                                     <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
                                     <span class="sr-only">Close</span>
@@ -64,11 +88,49 @@
                             @enderror
                         </div>
 
+                        <div class="flex flex-row gap-4">
+                            <div class="mb-[22px]">
+                                <input type="text" placeholder="City" name="city" value="{{ old('city') }}"
+                                       class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
+                                @error('city')
+                                <div
+                                    class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                    role="alert">
+                                    <button type="button" class="close font__size-18" data-dismiss="alert">
+                                        <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+                                    <strong class="font__weight-semibold">Oh snap!</strong> {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="mb-[22px]">
+                                <input type="number" placeholder="Phone Number" name="phoneNumber"
+                                       value="{{ old('phoneNumber') }}"
+                                       class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
+                                @error('phoneNumber')
+                                <div
+                                    class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                    role="alert">
+                                    <button type="button" class="close font__size-18" data-dismiss="alert">
+                                        <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+                                    <strong class="font__weight-semibold">Oh snap!</strong> {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="mb-[22px]">
                             <input type="email" placeholder="Email" name="email" value="{{ old('email') }}"
                                    class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
                             @error('email')
-                            <div class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert">
+                            <div
+                                class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                role="alert">
                                 <button type="button" class="close font__size-18" data-dismiss="alert">
                                     <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
                                     <span class="sr-only">Close</span>
@@ -80,10 +142,13 @@
                         </div>
 
                         <div class="mb-[22px]">
-                            <input type="password" placeholder="***********" name="password" value="{{ old('password') }}"
+                            <input type="password" placeholder="***********" name="password"
+                                   value="{{ old('password') }}"
                                    class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
                             @error('password')
-                            <div class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert">
+                            <div
+                                class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+                                role="alert">
                                 <button type="button" class="close font__size-18" data-dismiss="alert">
                                     <span aria-hidden="true"><i class="fa fa-times danger"></i></span>
                                     <span class="sr-only">Close</span>
