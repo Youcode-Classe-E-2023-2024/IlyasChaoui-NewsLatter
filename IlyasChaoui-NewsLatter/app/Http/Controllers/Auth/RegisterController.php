@@ -36,23 +36,44 @@ class RegisterController extends Controller
         */
         $request->validate([
             'name' => 'required',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'city' => 'required',
+            'phoneNumber' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
         ]);
-//dd($request);
+
+        /*
+        Handle File Upload
+        */
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $filename = time() . '_' . $file->getClientOriginalName();
+
+            $destinationPath = 'assets-home/profileImages';
+
+            $file->move(public_path($destinationPath), $filename);
+
+            $picturePath = $destinationPath . '/' . $filename;
+        }
+
         /*
         Database Insert
         */
         $user = User::create([
             'name' => $request->name,
+            'picture' => $picturePath,
+            'city' => $request->city,
+            'phoneNumber' => $request->phoneNumber,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
-        Auth::login($user);
+         Auth::login($user);
 
         return redirect(RouteServiceProvider::LOGIN);
     }
+
+
 
 
     /**
