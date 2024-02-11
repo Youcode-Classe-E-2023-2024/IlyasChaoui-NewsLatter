@@ -45,33 +45,34 @@
     pageLink.forEach((elem) => {
         elem.addEventListener("click", (e) => {
             e.preventDefault();
-            document.querySelector(elem.getAttribute("href")).scrollIntoView({
-                behavior: "smooth",
-                offsetTop: 1 - 60,
-            });
+            const href = elem.getAttribute("href");
+            // Ensure href is a valid selector for querySelector (e.g., starts with '#')
+            if (href.startsWith("#")) {
+                const scrollTarget = document.querySelector(href);
+                if (scrollTarget) {
+                    scrollTarget.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start", // Consider using 'start' for aligning with the top
+                    });
+                }
+            }
         });
     });
 
     // section menu active
     function onScroll(event) {
         const sections = document.querySelectorAll(".ud-menu-scroll");
-        const scrollPos =
-            window.pageYOffset ||
-            document.documentElement.scrollTop ||
-            document.body.scrollTop;
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
         for (let i = 0; i < sections.length; i++) {
             const currLink = sections[i];
             const val = currLink.getAttribute("href");
+            if (!val.startsWith("#")) continue; // Skip if not an ID selector
             const refElement = document.querySelector(val);
+            if (!refElement) continue; // Skip if the element does not exist
             const scrollTopMinus = scrollPos + 73;
-            if (
-                refElement.offsetTop <= scrollTopMinus &&
-                refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-            ) {
-                document
-                    .querySelector(".ud-menu-scroll")
-                    .classList.remove("active");
+            if (refElement.offsetTop <= scrollTopMinus && refElement.offsetTop + refElement.offsetHeight > scrollTopMinus) {
+                document.querySelector(".ud-menu-scroll.active")?.classList.remove("active");
                 currLink.classList.add("active");
             } else {
                 currLink.classList.remove("active");
@@ -80,6 +81,7 @@
     }
 
     window.document.addEventListener("scroll", onScroll);
+
 
     // Testimonial
     const testimonialSwiper = new Swiper(".testimonial-carousel", {
@@ -108,5 +110,7 @@
         },
     });
 </script>
+<!-- register form script file  -->
+<script src="./assets-home/js/image-register.js"></script>
 </body>
 </html>
