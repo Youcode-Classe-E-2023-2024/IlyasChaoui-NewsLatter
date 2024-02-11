@@ -38,6 +38,7 @@ class RolePermissionSeeder extends Seeder
             $addMediasPermission,
             $DeleteFilePermission,
         ]);
+
         // Assign permissions to editor role
 
         $editorRole->givePermissionTo([
