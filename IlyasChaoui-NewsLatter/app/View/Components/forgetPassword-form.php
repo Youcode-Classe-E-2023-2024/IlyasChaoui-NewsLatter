@@ -21,6 +21,6 @@ class forgetPassword-form extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forget-password-form');
+        return view('components.form.forget-password-form');
     }
 }
