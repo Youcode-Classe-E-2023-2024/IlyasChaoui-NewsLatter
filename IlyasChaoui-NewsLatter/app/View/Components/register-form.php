@@ -21,6 +21,6 @@ class register-form extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.register-form');
+        return view('components.form.register-form');
     }
 }
