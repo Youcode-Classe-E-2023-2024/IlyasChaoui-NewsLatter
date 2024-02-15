@@ -22,6 +22,6 @@ class UserTable extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.user-table');
+        return view('components.table.user-table');
     }
 }
