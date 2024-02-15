@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Emaillist;
+use App\Models\Medias;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -31,11 +33,20 @@ class UserController extends Controller
      */
     public function showUserTable()
     {
+        $layout = 'layouts.dashboard-layout';
         $users = User::paginate(6, ['*'], 'users');
         $emails = Emaillist::paginate(6, ['*'], 'emails');
+        $medias = Medias::paginate(6, ['*'], 'medias');
+        $allUsers = User::all();
+        $roles = Role::all();
+
         return view('Dashboard.dashboard', [
             'users' => $users,
-            'emails' => $emails
+            'medias' => $medias,
+            'layout' => $layout,
+            'emails' => $emails,
+            'allUsers' => $allUsers,
+            'roles' => $roles
         ]);
     }
 
