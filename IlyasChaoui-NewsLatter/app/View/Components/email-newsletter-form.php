@@ -21,6 +21,6 @@ class email-newsletter-form extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.email-newsletter-form');
+        return view('components.form.email-newsletter-form');
     }
 }
