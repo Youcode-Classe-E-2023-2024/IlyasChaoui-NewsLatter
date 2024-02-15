@@ -115,6 +115,12 @@
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/laravel-medialibrary" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/laravel-package-tools" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
