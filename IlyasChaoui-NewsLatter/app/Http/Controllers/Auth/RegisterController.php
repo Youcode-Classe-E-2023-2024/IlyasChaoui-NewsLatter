@@ -68,7 +68,9 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-         Auth::login($user);
+//         Auth::login($user);
+
+        $user->assignRole('viewer');
 
         return redirect(RouteServiceProvider::LOGIN);
     }
