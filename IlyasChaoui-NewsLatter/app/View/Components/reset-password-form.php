@@ -21,6 +21,6 @@ class reset-password-form extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.reset-password-form');
+        return view('components.form.reset-password-form');
     }
 }
