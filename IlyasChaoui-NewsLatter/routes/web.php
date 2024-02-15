@@ -4,7 +4,10 @@ use App\Http\Controllers\Auth\ForgetPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MediasController;
 use App\Http\Controllers\NewsletterEmailsController;
+use App\Http\Controllers\TemplatesController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -35,28 +38,34 @@ Route::middleware(['guest'])->group(function () {
     Route::post('/subscribe', [NewsletterEmailsController::class, 'subscribe'])->name('subscribeTrait');
 
     Route::get('/', function () {
-        return response()
-            ->view('home')
-            ->header('Cache-Control', 'no-store, no-cache, max-age=0');
+        return view('home');
     })->name('homePage');
 });
 
-
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/dashboard', [NewsletterEmailsController::class, 'index'])->name('subscribe');
-
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/template', [TemplatesController::class, 'index']);
     Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
-
-    Route::get('/profile',[UserController::class, 'showProfile']);
+    Route::get('/profile', [UserController::class, 'showProfile']);
     Route::put('/profile/{id}', [UserController::class, 'update'])->name('user.update');
-
     Route::post('/logout', [LoginController::class, 'destroy'])->name('dashboard.logout');
+    Route::get('/medias', [MediasController::class, 'showMedias'])->name('show.medias');
+
+    Route::middleware(['admin'])->group(function () {
+        Route::get('/dashboard/changeRole', [DashboardController::class, 'changeRole'])->name('change.role');
+    });
+
+    Route::middleware(['admin', 'editor'])->group(function () {
+        Route::post('/medias', [MediasController::class, 'store'])->name('media.upload');
+        Route::delete('/delete/media/{id}', [MediasController::class, 'delete'])->name('delete.media');
+    });
 
 });
 
 
-//Route::post('/delete', [NewsletterEmailsController::class, 'delete'])->name('unsubscribe');
+
+
 
 
 
