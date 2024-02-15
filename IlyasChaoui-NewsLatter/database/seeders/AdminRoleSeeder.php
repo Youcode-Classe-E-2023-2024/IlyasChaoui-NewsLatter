@@ -25,7 +25,6 @@ class AdminRoleSeeder extends Seeder
             echo "Admin role assigned to user: " . $user->email . "\n";
 
         } else {
-
             echo "User with email {$userEmail} not found.\n";
         }
     }

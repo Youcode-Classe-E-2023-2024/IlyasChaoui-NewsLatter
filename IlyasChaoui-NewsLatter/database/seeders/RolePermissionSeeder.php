@@ -20,6 +20,7 @@ class RolePermissionSeeder extends Seeder
         // Retrieve roles
         $adminRole = Role::where('name', 'admin')->first();
         $editorRole = Role::where('name', 'editor')->first();
+        $viewerRole = Role::where('name', 'viewer')->first();
 
         // Retrieve permissions
         $assignRolesPermission = Permission::where('name', 'assign role')->first();
@@ -27,7 +28,8 @@ class RolePermissionSeeder extends Seeder
         $createTemplatesPermission = Permission::where('name', 'create template')->first();
         $sendTemplatesPermission = Permission::where('name', 'send mail')->first();
         $addMediasPermission = Permission::where('name', 'upload file')->first();
-        $DeleteFilePermission = Permission::where('name', 'delete file')->first();
+        $deleteFilePermission = Permission::where('name', 'delete file')->first();
+        $displayOnly = Permission::where('name', 'display only')->first();
 
         // Assign permissions to admin role
         $adminRole->givePermissionTo([
@@ -36,7 +38,12 @@ class RolePermissionSeeder extends Seeder
             $createTemplatesPermission,
             $sendTemplatesPermission,
             $addMediasPermission,
-            $DeleteFilePermission,
+            $deleteFilePermission,
+        ]);
+
+        // Assign permissions to viewer role
+        $viewerRole->givePermissionTo([
+            $displayOnly
         ]);
 
         // Assign permissions to editor role
@@ -46,7 +53,7 @@ class RolePermissionSeeder extends Seeder
             $createTemplatesPermission,
             $sendTemplatesPermission,
             $addMediasPermission,
-            $DeleteFilePermission,
+            $deleteFilePermission,
         ]);
     }
 }
