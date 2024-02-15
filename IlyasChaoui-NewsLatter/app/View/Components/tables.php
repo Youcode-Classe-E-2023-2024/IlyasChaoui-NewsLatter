@@ -10,18 +10,22 @@ class tables extends Component
 {
     public $users;
     public $emails;
+    public $medias;
 
-    public function __construct($users,$emails)
-{
-    $this->users = $users;
-    $this->emails = $emails;
-}
+
+    public function __construct($users = null, $emails = null, $medias = null)
+    {
+        $this->users = $users;
+        $this->emails = $emails;
+        $this->medias = $medias;
+    }
+
 
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-        return view('components.tables');
+        return view('components.Dashboard.table');
     }
 }
