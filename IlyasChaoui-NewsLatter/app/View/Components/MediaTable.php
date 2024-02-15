@@ -22,6 +22,6 @@ class MediaTable extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.media-table');
+        return view('components.table.media-table');
     }
 }
