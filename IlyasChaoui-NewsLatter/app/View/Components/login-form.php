@@ -23,6 +23,6 @@ class login-form extends Component
     public
     function render(): View|Closure|string
     {
-        return view('components.login-form');
+        return view('components.form.login-form');
     }
 }
