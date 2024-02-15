@@ -25,13 +25,13 @@
 <body>
 
 {{--navbar section--}}
-<x-navbar/>
+<x-navbar.navbar/>
 {{--end navbar section--}}
 
 @yield('content')
 
 {{--footer section--}}
-<x-footer/>
+<x-footer.footer/>
 {{--end footer section--}}
 
 <!-- ====== All Scripts -->
