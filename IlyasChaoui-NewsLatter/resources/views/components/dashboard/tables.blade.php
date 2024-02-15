@@ -11,7 +11,8 @@
 
     <div class="flex  flex-col justify-between lg:flex-row">
         <x-subscribe-table :emails="$emails"/>
-        <x-all-media-table/>
+
+        <x-all-media-table :medias="$medias"/>
     </div>
     <footer class="pt-4">
         <div class="w-full px-6 mx-auto">
