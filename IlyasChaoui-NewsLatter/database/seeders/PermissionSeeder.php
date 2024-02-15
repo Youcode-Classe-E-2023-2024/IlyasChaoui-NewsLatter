@@ -19,5 +19,6 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'upload file']);
         Permission::create(['name' => 'delete file']);
         Permission::create(['name' => 'assign role']);
+        Permission::create(['name' => 'display only']);
     }
 }
