@@ -11,9 +11,10 @@ class AllMediaTable extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $medias;
+    public function __construct($medias)
     {
-        //
+        $this->medias = $medias;
     }
 
     /**
@@ -21,6 +22,6 @@ class AllMediaTable extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.all-media-table');
+        return view('components.table.all-media-table');
     }
 }
