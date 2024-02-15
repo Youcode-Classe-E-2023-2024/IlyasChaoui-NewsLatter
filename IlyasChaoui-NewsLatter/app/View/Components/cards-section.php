@@ -21,6 +21,6 @@ class cards-section extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.cards-section');
+        return view('components.dashboard.cards-section');
     }
 }
