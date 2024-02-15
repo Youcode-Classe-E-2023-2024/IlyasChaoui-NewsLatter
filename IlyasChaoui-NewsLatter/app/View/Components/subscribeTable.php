@@ -23,6 +23,6 @@ class subscribeTable extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.subscribe-table');
+        return view('components.table.subscribe-table');
     }
 }
