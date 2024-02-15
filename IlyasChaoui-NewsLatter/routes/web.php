@@ -44,6 +44,7 @@ Route::middleware(['guest'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
 
+    // Routes accessible to all roles
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/template', [TemplatesController::class, 'index']);
     Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
@@ -52,16 +53,19 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [LoginController::class, 'destroy'])->name('dashboard.logout');
     Route::get('/medias', [MediasController::class, 'showMedias'])->name('show.medias');
 
-    Route::middleware(['admin'])->group(function () {
+    // Routes accessible only to the admin role
+    Route::middleware(['role:admin'])->group(function () {
         Route::get('/dashboard/changeRole', [DashboardController::class, 'changeRole'])->name('change.role');
     });
 
-    Route::middleware(['admin', 'editor'])->group(function () {
+    // Routes accessible to both admin and editor roles
+    Route::middleware(['role:admin,editor'])->group(function () {
         Route::post('/medias', [MediasController::class, 'store'])->name('media.upload');
         Route::delete('/delete/media/{id}', [MediasController::class, 'delete'])->name('delete.media');
     });
 
 });
+
 
 
 
