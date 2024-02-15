@@ -21,6 +21,6 @@ class profile-section extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.profile-section');
+        return view('components.dashboard.profile-section');
     }
 }
