@@ -7,23 +7,16 @@ use App\Models\Emaillist;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
 
 class NewsletterEmailsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $users = User::count(); //
-        $subscribeEmails = Emaillist::count();
-
-        // Passing data to the view
-        return view('Dashboard.dashboard', [
-            'user' => $request->user(),
-            'usersCount' => $users,
-            'subscribeEmailsCount' => $subscribeEmails
-        ]);
+        //
     }
 
     /**
