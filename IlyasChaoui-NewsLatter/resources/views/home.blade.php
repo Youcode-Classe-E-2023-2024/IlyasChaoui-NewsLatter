@@ -8,7 +8,7 @@
 
     <!-- ====== Hero Section Start -->
     <div class="ag-maecenas-block dark:bg-dark">
-        <div class="ag-maecenas_title dark:bg-dark   ">
+        <div class="ag-maecenas_title dark:bg-dark dark:fill-dark">
             <div class="ag-format-container dark:text-black">
                 NewsLetter
             </div>
