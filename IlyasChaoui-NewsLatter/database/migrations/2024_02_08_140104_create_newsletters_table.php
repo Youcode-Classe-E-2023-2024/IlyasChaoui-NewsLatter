@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('titre');
             $table->string('contenu');
-            $table->date('dateEnvoi');
             $table->enum('deleted', ['restaured'])->default('restaured');
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
