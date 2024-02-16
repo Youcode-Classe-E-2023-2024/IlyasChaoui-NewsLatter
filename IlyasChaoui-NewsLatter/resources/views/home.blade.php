@@ -14,10 +14,6 @@
             </div>
         </div>
     </div>
-{{--    <form action="/logout" method="post">--}}
-{{--        @csrf--}}
-{{--        <button type="submit">Logout</button>--}}
-{{--    </form>--}}
 
     <!-- ====== Hero Section End -->
 
@@ -40,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <x-email-newsletter-form/>
+            <x-form.email-newsletter-form/>
             <div class="-mx-4 flex flex-wrap">
                 <div class="w-full px-4 md:w-1/2 lg:w-1/4">
                     <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
