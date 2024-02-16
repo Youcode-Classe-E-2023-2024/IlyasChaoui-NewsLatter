@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MediasController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\NewsletterEmailsController;
 use App\Http\Controllers\TemplatesController;
 use App\Http\Controllers\UserController;
@@ -44,24 +45,26 @@ Route::middleware(['guest'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
 
-    // Routes accessible to all roles
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/template', [TemplatesController::class, 'index']);
+    Route::get('/template', [TemplatesController::class, 'index'])->name('template');
     Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
     Route::get('/profile', [UserController::class, 'showProfile']);
     Route::put('/profile/{id}', [UserController::class, 'update'])->name('user.update');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('dashboard.logout');
     Route::get('/medias', [MediasController::class, 'showMedias'])->name('show.medias');
 
-    // Routes accessible only to the admin role
     Route::middleware(['role:admin'])->group(function () {
         Route::get('/dashboard/changeRole', [DashboardController::class, 'changeRole'])->name('change.role');
     });
 
-    // Routes accessible to both admin and editor roles
     Route::middleware(['role:admin,editor'])->group(function () {
+
         Route::post('/medias', [MediasController::class, 'store'])->name('media.upload');
+        Route::post('/template', [NewsletterController::class, 'save'])->name('create.template');
         Route::delete('/delete/media/{id}', [MediasController::class, 'delete'])->name('delete.media');
+        Route::post('/template/send/{id}', [NewsletterController::class, 'send'])->name('send.mails');
+        Route::post('/dashboard/update', [UserController::class, 'updateRole'])->name('update.role');
+
     });
 
 });
