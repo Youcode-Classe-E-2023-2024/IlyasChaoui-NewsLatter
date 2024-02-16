@@ -11,9 +11,10 @@ class templates extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $newsletter;
+    public function __construct($newsletter)
     {
-        //
+        $this->newsletter = $newsletter;
     }
 
     /**
