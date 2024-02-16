@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Newsletter;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
@@ -16,8 +17,10 @@ class TemplatesController extends Controller
         $layout = 'layouts.backup-layout';
         $roles = Role::all();
         $allUsers = User::all();
+        $newsletters = Newsletter::all();
         return view('Dashboard.dashboard', [
             'roles' => $roles,
+            'newsletters' => $newsletters,
             'layout' => $layout,
             'allUsers' => $allUsers
         ]);
