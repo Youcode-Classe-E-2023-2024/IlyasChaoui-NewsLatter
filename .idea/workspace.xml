@@ -2,62 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3e8244-c6fd-451e-87ca-e9e42dedaaac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/css/cards.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/img/pdf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/all-media-table.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/backup-layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/bootstrap/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/js/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/mail/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IlyasChaoui-NewsLatter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IlyasChaoui-NewsLatter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/NewsletterEmailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/NewsletterEmailsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/TemplatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/TemplatesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/AllMediaTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/AllMediaTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/MediaTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/MediaTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/UserTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/UserTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/auth-page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/cards-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/cards-section.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/email-newsletter-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/email-newsletter-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/forgetPassword-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/forgetPassword-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/login-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/login-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/profile-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/profile-section.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/register-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/register-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/reset-password-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/reset-password-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/subscribeTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/subscribeTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Listeners/EmailOwnerAboutSubscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Listeners/EmailOwnerAboutSubscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Mail/UserSubscribedMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Mail/UserSubscribedMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/templates.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/View/Components/templates.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_140048_create_medias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_140048_create_medias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_150646_create_permission_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_150646_create_permission_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/AdminRoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/AdminRoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/PermissionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/RolePermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/RolePermissionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/seeders/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets-home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets-home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/css/button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/public/assets/js/dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Auth/authentication.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Auth/authentication.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_140104_create_newsletters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_140104_create_newsletters_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Dashboard/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/all-media-table.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/cards-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/cards-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/email-newsletter-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/form/email-newsletter-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/footer/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/forget-password-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/form/forget-password-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/login-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/form/login-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/navbar/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/profile-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/profile-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/register-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/form/register-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/reset-password-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/form/reset-password-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/subscribe-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/subscribe-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/tables.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/tables.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/user-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/user-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/tables.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/tables.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/templates.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/templates.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/sidebar/settings-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/sidebar/settings-sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/backup-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/backup-layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/dashboard-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/dashboard-layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,9 +167,13 @@
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/laravel-medialibrary" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/image-optimizer" />
       <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/spatie/laravel-package-tools" />
+      <path value="$PROJECT_DIR$/IlyasChaoui-NewsLatter/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="ProjectId" id="2c00dBFRSxeEZLxU7LiNd2naaW2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -224,11 +191,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Laravel project\IlyasChaoui-NewsLatter\IlyasChaoui-NewsLatter\app\bootstrap" />
       <recent name="C:\xampp\htdocs\Laravel project\IlyasChaoui-NewsLatter\IlyasChaoui-NewsLatter\resources\views\components\dashboard" />
       <recent name="C:\xampp\htdocs\Laravel project\IlyasChaoui-NewsLatter\IlyasChaoui-NewsLatter\resources\views\components\navbar" />
       <recent name="C:\xampp\htdocs\Laravel project\IlyasChaoui-NewsLatter\IlyasChaoui-NewsLatter\resources\views\components\sidebar" />
       <recent name="C:\xampp\htdocs\Laravel project\IlyasChaoui-NewsLatter\IlyasChaoui-NewsLatter\resources\views\components\footers" />
-      <recent name="C:\xampp\htdocs\Laravel project\IlyasChaoui-NewsLatter\IlyasChaoui-NewsLatter\resources\views\components\tables" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -253,6 +220,9 @@
       <workItem from="1707898698125" duration="23062000" />
       <workItem from="1707983488992" duration="984000" />
       <workItem from="1707985700929" duration="2758000" />
+      <workItem from="1708032376426" duration="1188000" />
+      <workItem from="1708071490151" duration="8850000" />
+      <workItem from="1708091028928" duration="1655000" />
     </task>
     <servers />
   </component>
