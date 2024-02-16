@@ -88,4 +88,14 @@ class UserController extends Controller
     {
         //
     }
+    function updateRole(Request $request) {
+        $user = User::find($request->userId);
+        $role = Role::find($request->id);
+
+        $user->syncRoles($role);
+
+        dd("success");
+
+
+    }
 }
