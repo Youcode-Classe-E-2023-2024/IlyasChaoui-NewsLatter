@@ -24,6 +24,7 @@ class EmailOwnerAboutSubscription
      */
     public function handle(UserSubscribed $event)
     {
+
         DB::table('emaillists')->insert([
             'email' => $event->email
         ]);
