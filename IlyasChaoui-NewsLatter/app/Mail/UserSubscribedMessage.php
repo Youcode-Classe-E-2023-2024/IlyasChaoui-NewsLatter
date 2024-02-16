@@ -13,9 +13,12 @@ class UserSubscribedMessage extends Mailable
 {
     use Queueable, SerializesModels;
 
+    //public $uusers;
+
     /**
      * Create a new message instance.
      */
+    // users
     public function __construct()
     {
         //
