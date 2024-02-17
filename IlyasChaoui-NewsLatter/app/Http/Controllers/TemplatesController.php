@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Medias;
 use App\Models\Newsletter;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,11 +18,13 @@ class TemplatesController extends Controller
         $layout = 'layouts.backup-layout';
         $roles = Role::all();
         $allUsers = User::all();
+        $medias = Medias::all();
         $newsletters = Newsletter::all();
         return view('Dashboard.dashboard', [
             'roles' => $roles,
             'newsletters' => $newsletters,
             'layout' => $layout,
+            'medias' => $medias,
             'allUsers' => $allUsers
         ]);
     }

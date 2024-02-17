@@ -96,7 +96,6 @@
             @foreach ($medias as $media)
                 @foreach ($media->getMedia() as $mediaItem)
                     @if ($mediaItem->type == 'image')
-                        {{--                        @dd($mediaItem->getUrl()) --}}
                         <div
                             class="w-75 h-80 bg-white dark:bg-blue-dark border border-gray-300 rounded-3xl text-black p-4 flex flex-col items-start justify-center gap-3 hover:shadow-2xl hover:shadow-sky-400 transition-shadow">
                             <div class="w-60 h-40 rounded-2xl">
@@ -123,11 +122,12 @@
 </div>
 <div class="w-full overflow-y-auto px-6 py-6 mx-auto">
     <!-- content -->
-    <div class="w-full max-w-full px-3 xl:w-1/2 xl:flex-none">
+    <div class="w-full max-w-full px-3 xl:w-1/2 xl:flex-none">d
         <div class="flex gap-[30px] -mx-3">
             @foreach ($medias as $media)
                 @foreach ($media->getMedia() as $mediaItem)
                     @if ($mediaItem->type == 'video')
+
                         <div
                             class="w-75 h-100 bg-white border border-gray-300 rounded-3xl text-black p-4 flex flex-col items-start justify-center gap-3 hover:shadow-2xl hover:shadow-sky-400 transition-shadow">
                             <div class="w-60 h-full rounded-2xl">

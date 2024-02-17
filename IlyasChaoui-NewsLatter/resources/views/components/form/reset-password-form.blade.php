@@ -53,7 +53,7 @@
                         <div class="mb-[22px]">
                             <div class="mb-[22px]">
                                 <div class="mb-[22px]">
-                                    <input type="email" placeholder="Email" name="email" value="{{ $_GET["email"] }}"
+                                    <input type="email" placeholder="Email" name="email" value="{{ $_GET["email"] }}" readonly
                                            class="w-full px-5 py-3 mb-4 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none"/>
                                     @error('email')
                                     <div class="alert fade mb-4 rounded-[10px] alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert">

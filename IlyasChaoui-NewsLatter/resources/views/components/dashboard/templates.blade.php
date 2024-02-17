@@ -22,14 +22,14 @@
     });
 </script>
 
-
+@hasanyrole('admin|editor')
 <!-- Modal toggle -->
 <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
         class="absolute right-4 top-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button">
     Create Template
 </button>
-
+@endhasanyrole
 <!-- Main modal -->
 <div id="crud-modal" tabindex="-1" aria-hidden="true"
      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -53,7 +53,7 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form class="p-4 md:p-5" action="{{ route('create.template') }}" method="post">
+            <form class="p-4 md:p-5" action="{{ route('create.template') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
@@ -63,6 +63,40 @@
                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                placeholder="Type product name" required="">
                     </div>
+                    <label for="media" class="mb-3 block text-base font-medium ">
+                        Media
+                    </label>
+                    <div class="rounded-md border border-[#e0e0e0] p-1 outline-none flex">
+                        <input type="text" id="selectedMedia" name="images" placeholder="Media"
+                               class="rounded w-full pb-2 py-2 px-3 placeholder-gray-500 outline-none"
+                               style="width: 35rem;">
+                        <div
+                            class="absolute max-h-40 mt-12 z-10 mt-2 bg-white border border-gray-300 rounded-md shadow-lg  hidden"
+                            id="dropdownContent">
+                            @foreach ($medias as $media)
+                                @foreach ($media->getMedia() as $mediaItem)
+                                    <div class="title bg-gray-100 border p-2 border-gray-300 w-full outline-none">
+                                        <label>
+                                            @if ($mediaItem->type == 'image')
+                                                <img src="{{ $mediaItem->getUrl() }}" alt='{{ $mediaItem->name }}'
+                                                     class="h-20 w-full object-cover object-center inline-block mr-2"
+                                                     onclick="selectMedia('{{ $mediaItem->getUrl() }}')">
+                                            @elseif($mediaItem->type == 'video')
+                                                <video controls class="h-24 w-full"
+                                                       onclick="selectMedia('{{ $mediaItem->getUrl() }}')">
+                                                    <source src="{{ $mediaItem->getUrl() }}" type="video/mp4">
+                                                </video>
+                                            @endif
+                                        </label>
+                                    </div>
+                                @endforeach
+                            @endforeach
+                        </div>
+                        <div class="m-2">
+                            <button type="button" onclick="toggleDropdown()">^_^</button>
+                        </div>
+                    </div>
+
                     <div class="col-span-2">
                         <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
                             Description</label>
@@ -104,6 +138,7 @@
                                 <div class="flex flex-col">
                                     <h2 class="font-extrabold">{{ $newsletter->titre }}</h2>
                                 </div>
+                                @hasanyrole('admin|editor')
                                 <form action="{{ route('send.mails', ['id' => $newsletter->id]) }}" method="post">
                                     @csrf
                                     <button
@@ -113,6 +148,7 @@
                                         Send
                                     </button>
                                 </form>
+                                @endhasanyrole
                             </div>
                         </div>
                     @endforeach
@@ -123,4 +159,16 @@
     </div>
 </div>
 
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById('dropdownContent');
+        dropdown.classList.toggle('hidden');
+    }
 
+    function selectMedia(url) {
+        var selectedMediaInput = document.getElementById("selectedMedia");
+        selectedMediaInput.value = url;
+        toggleDropdown();
+    }
+
+</script>

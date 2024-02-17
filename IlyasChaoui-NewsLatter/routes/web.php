@@ -47,7 +47,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/template', [TemplatesController::class, 'index'])->name('template');
-    Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
     Route::get('/profile', [UserController::class, 'showProfile']);
     Route::put('/profile/{id}', [UserController::class, 'update'])->name('user.update');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('dashboard.logout');
@@ -59,6 +58,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:admin,editor'])->group(function () {
 
+        Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
         Route::post('/medias', [MediasController::class, 'store'])->name('media.upload');
         Route::post('/template', [NewsletterController::class, 'save'])->name('create.template');
         Route::delete('/delete/media/{id}', [MediasController::class, 'delete'])->name('delete.media');

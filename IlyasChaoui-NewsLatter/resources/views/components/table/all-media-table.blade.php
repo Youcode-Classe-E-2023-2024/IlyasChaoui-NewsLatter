@@ -50,7 +50,6 @@
                                                 class="mr-2 text-xs font-semibold leading-tight dark:text-white dark:opacity-60">{{ $mediaItem->created_at->toFormattedDateString() }}</span>
                                         </div>
                                     </td>
-                                    <td class="p-2 align-middle bg-transparent border-b-0 whitespace-nowrap shadow-transparent">
                                         <form action="{{ route('delete.media', ['id' => $mediaItem->id]) }}"
                                               method="post">
                                             @csrf

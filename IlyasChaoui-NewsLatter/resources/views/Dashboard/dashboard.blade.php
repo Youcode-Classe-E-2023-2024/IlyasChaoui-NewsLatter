@@ -14,7 +14,7 @@
         <!-- end table -->
     @elseif(Request::url() === 'http://127.0.0.1:8000/template')
         <!-- start table -->
-        <x-Dashboard.templates :newsletters="$newsletters" />
+        <x-Dashboard.templates :newsletters="$newsletters" :medias="$medias"/>
         <!-- end table -->
     @else
         <!-- start profile -->
@@ -26,6 +26,7 @@
 @section('content')
     <!--button of pemission manage -->
 
-        <x-sidebar.settings-sidebar :allUsers="$allUsers" :roles="$roles"/>
-
+    @role('admin')
+    <x-sidebar.settings-sidebar :allUsers="$allUsers" :roles="$roles"/>
+    @endrole
 @endsection

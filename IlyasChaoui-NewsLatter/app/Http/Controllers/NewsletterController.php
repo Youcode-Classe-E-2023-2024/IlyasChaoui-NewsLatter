@@ -42,6 +42,7 @@ class NewsletterController extends Controller
         // Create the newsletter in the database
         Newsletter::create([
             'titre' => $request->titre,
+            'images' => $request->images,
             'contenu' => $request->contenu,
             "user_id" => $userId,
         ]);

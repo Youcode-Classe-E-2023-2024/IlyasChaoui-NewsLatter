@@ -42,11 +42,18 @@
             </div>
             <div class="w-full max-w-xs mx-auto">
 
-                <form class="max-w-sm mx-auto flex flex-col" acttion="{{ route('change.role') }}" method="post">
+                <form class="max-w-sm mx-auto flex flex-col" action="{{ route('change.role') }}" method="post">
                     <label for="underline_select" class="sr-only">Underline select</label>
                     @foreach($allUsers as $user)
                         <div class="flex w-full justify-between flex-row">
-                            <div>{{ $user['name'] }}</div>
+                            <div class="flex px-2 py-1">
+                                <div>
+                                    <img src="{{ $user->picture }}" class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-in-out h-9 w-9 rounded-xl" alt="user2" />
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h6 class="mb-0 text-sm leading-normal dark:text-white">{{ $user->name }}</h6>
+                                </div>
+                            </div>
                             <select data-user-id="{{ $user['id'] }}"
                                     class="roleSelect block py-2.5 px-0 w-20 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
                                 <div class="flex">
