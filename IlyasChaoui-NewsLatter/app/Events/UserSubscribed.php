@@ -15,7 +15,7 @@ class UserSubscribed
     use Dispatchable, InteractsWithSockets, SerializesModels;
      public $email;
     /**
-     * Create a new event instance.
+     * Create a new event instance
      */
     public function __construct($email)
     {

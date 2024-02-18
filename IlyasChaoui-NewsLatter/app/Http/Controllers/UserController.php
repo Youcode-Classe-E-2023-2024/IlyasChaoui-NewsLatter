@@ -23,9 +23,14 @@ class UserController extends Controller
      */
     public function showProfile(Request $request)
     {
-        return view('Dashboard.dashboard', [
-            'user' => $request->user()
-        ]);
+        $data = [
+            'user' => $request->user(),
+            'allUsers' => User::all(),
+            'roles' => Role::all(),
+            'layout' => 'layouts.dashboard-layout',
+        ];
+        return view('dashboard.dashboard', compact('data'));
+
     }
 
     /**
@@ -33,21 +38,16 @@ class UserController extends Controller
      */
     public function showUserTable()
     {
-        $layout = 'layouts.dashboard-layout';
-        $users = User::paginate(6, ['*'], 'users');
-        $emails = Emaillist::paginate(6, ['*'], 'emails');
-        $medias = Medias::paginate(6, ['*'], 'medias');
-        $allUsers = User::all();
-        $roles = Role::all();
+        $data = [
+            'layout' => 'layouts.dashboard-layout',
+            'users' => User::paginate(6, ['*'], 'users'),
+            'emails' => Emaillist::paginate(6, ['*'], 'emails'),
+            'medias' => Medias::paginate(6, ['*'], 'medias'),
+            'allUsers' => User::all(),
+            'roles' => Role::all(),
+        ];
 
-        return view('Dashboard.dashboard', [
-            'users' => $users,
-            'medias' => $medias,
-            'layout' => $layout,
-            'emails' => $emails,
-            'allUsers' => $allUsers,
-            'roles' => $roles
-        ]);
+        return view('Dashboard.dashboard', compact('data'));
     }
 
 
@@ -94,8 +94,16 @@ class UserController extends Controller
 
         $user->syncRoles($role);
 
-        dd("success");
-
-
+//        dd("success");
+    }
+    public function delete($id)
+    {
+        // Find the media by its ID
+        $user = User::findOrFail($id);
+        if (!$user) {
+            return redirect()->back()->with('error', 'Media not found.');
+        }
+        $user->delete();
+        return redirect()->back()->with('success', 'Template deleted successfulnesses.');
     }
 }

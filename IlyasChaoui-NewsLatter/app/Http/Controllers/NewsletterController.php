@@ -108,8 +108,14 @@ class NewsletterController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete($id)
     {
-        //
+        // Find the media by its ID
+        $newsletter = Newsletter::findOrFail($id);
+        if (!$newsletter) {
+            return redirect()->back()->with('error', 'Media not found.');
+        }
+        $newsletter->delete();
+        return redirect()->back()->with('success', 'Template deleted successfulnesses.');
     }
 }

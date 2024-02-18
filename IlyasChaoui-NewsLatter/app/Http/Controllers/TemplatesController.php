@@ -15,19 +15,17 @@ class TemplatesController extends Controller
      */
     public function index()
     {
-        $layout = 'layouts.backup-layout';
-        $roles = Role::all();
-        $allUsers = User::all();
-        $medias = Medias::all();
-        $newsletters = Newsletter::all();
-        return view('Dashboard.dashboard', [
-            'roles' => $roles,
-            'newsletters' => $newsletters,
-            'layout' => $layout,
-            'medias' => $medias,
-            'allUsers' => $allUsers
-        ]);
+        $data = [
+            'layout' => 'layouts.backup-layout',
+            'roles' => Role::all(),
+            'allUsers' => User::all(),
+            'medias' => Medias::all(),
+            'newsletters' => Newsletter::all(),
+        ];
+
+        return view('Dashboard.dashboard', compact('data'));
     }
+
 
     /**
      * Store a newly created resource in storage.

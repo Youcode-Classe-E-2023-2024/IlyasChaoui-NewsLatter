@@ -25,11 +25,14 @@ class NewsletterEmailsController extends Controller
     public function subscribe(Request $request)
     {
         $request->validate([
-            'email' => 'required|unique:emaillists,email'
+            'email' => 'required|email|unique:emaillists,email',
+        ], [
+            'email.unique' => 'The email has already been subscribed.',
         ]);
 
         event(new UserSubscribed($request->input('email')));
-        return back();
+
+        return back()->with('success', 'You have successfully subscribed.');
     }
 
     /**
@@ -51,8 +54,14 @@ class NewsletterEmailsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete($id)
     {
-        //
+        // Find the media by its ID
+        $subscriber = Emaillist::findOrFail($id);
+        if (!$subscriber) {
+            return redirect()->back()->with('error', 'Media not found.');
+        }
+        $subscriber->delete();
+        return redirect()->back()->with('success', 'Template deleted successfulnesses.');
     }
 }

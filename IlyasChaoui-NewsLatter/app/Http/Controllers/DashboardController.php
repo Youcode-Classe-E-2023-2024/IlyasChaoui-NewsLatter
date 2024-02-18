@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Emaillist;
+use App\Models\Newsletter;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Permission\Models\Role;
 
 class DashboardController extends Controller
@@ -14,24 +17,29 @@ class DashboardController extends Controller
      */
     public function index(Request $request)
     {
-        // Determine the layout based on the request URL
-        $layout = 'layouts.dashboard-layout';
-        // Retrieving data
-        $usersCount = User::count();
-        $subscribeEmailsCount = Emaillist::count();
-        $roles = Role::all();
-        $allUsers = User::all();
-
-        // Passing data to the view along with the layout
-        return view('dashboard.dashboard', [
+        $data = [
             'user' => $request->user(),
-            'usersCount' => $usersCount,
-            'subscribeEmailsCount' => $subscribeEmailsCount,
-            'roles' => $roles,
-            'allUsers' => $allUsers,
-            'layout' => $layout
-        ]);
+            'counts' => [
+                'usersCount' => User::count(),
+                'mediaCount' => Media::count(),
+                'templateCount' => Newsletter::count(),
+                'subscribeEmailsCount' => Emaillist::count(),
+            ],
+            'roles' => Role::all(),
+            'allUsers' => User::all(),
+            'layout' => 'layouts.dashboard-layout',
+            'lastInsertionTime' => [
+                'User' =>  User::latest()->first()?->created_at->diffForHumans() ?? 'No Users Found',
+//                'Email' =>  Emaillist::latest()->first()?->created_at->diffForHumans() ?? 'No Users Found',
+                'Email' => 'No Subscribers Found',
+                'Media' =>  Media::latest()->first()?->created_at->diffForHumans() ?? 'No Medias Found',
+                'Template' =>  Newsletter::latest()->first()?->created_at->diffForHumans() ?? 'No Templates Found',
+            ],
+        ];
+
+        return view('dashboard.dashboard', compact('data'));
     }
+
 
     /**
      * Store a newly created resource in storage.

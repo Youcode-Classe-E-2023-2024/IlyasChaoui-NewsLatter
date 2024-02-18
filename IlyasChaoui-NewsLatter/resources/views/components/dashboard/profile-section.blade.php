@@ -64,7 +64,7 @@
                         </button>
                     </div>
                 </div>
-                <form action="{{ route('user.update', $user->id) }}" method="POST">
+                <form action="{{ route('user.update', $data['user']->id) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="flex-auto p-6">
@@ -74,7 +74,7 @@
                                 <div class="mb-4">
                                     <label for="username"
                                         class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Username</label>
-                                    <input type="text" name="name" value="{{ $user->name }}"
+                                    <input type="text" name="name" value="{{ $data['user']->name }}"
                                         class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
                                 </div>
                                 @error('name')
@@ -109,7 +109,7 @@
                                     <label for="email"
                                         class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Email
                                         address</label>
-                                    <input type="email" name="email" value="{{ $user->email }}"
+                                    <input type="email" name="email" value="{{ $data['user']->email }}"
                                         class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
                                 </div>
                                 @error('email')
@@ -150,7 +150,7 @@
                                 <div class="mb-4">
                                     <label for="city"
                                         class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">City</label>
-                                    <input type="text" name="city" value="{{ $user->city }}"
+                                    <input type="text" name="city" value="{{ $data['user']->city }}"
                                         class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
                                 </div>
                             </div>
@@ -185,7 +185,7 @@
                                     <label for="phoneNumber"
                                         class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Phone
                                         Number</label>
-                                    <input type="number" name="phoneNumber" value="{{ $user->phoneNumber }}"
+                                    <input type="number" name="phoneNumber" value="{{ $data['user']->phoneNumber }}"
                                         class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
                         <div class="mb-6 -mt-6 lg:mb-0 lg:-mt-16">
                             <a href="javascript:;">
                                 <img class="h-auto max-w-full border-2 border-white border-solid rounded-circle"
-                                    src="{{ $user->picture }}" alt="profile image">
+                                    src="{{ $data['user']->picture }}" alt="profile image">
                             </a>
                         </div>
                     </div>
@@ -286,22 +286,22 @@
                     </div>
                     <div class="mt-6 text-center">
                         <h5 class="dark:text-white ">
-                            {{ $user->name }}
+                            {{ $data['user']->name }}
                             <span class="font-light">, 35</span>
                         </h5>
                         <div class="mb-2 font-semibold leading-relaxed text-base dark:text-white/80 text-slate-700">
                             <i class="mr-2 dark:text-white ni ni-pin-3"></i>
-                            {{ $user->city }}
+                            {{ $data['user']->city }}
                         </div>
                         <div
                             class="mt-6 mb-2 font-semibold leading-relaxed text-base dark:text-white/80 text-slate-700">
                             <i class="mr-2 dark:text-white fas fa-mobile-alt"></i>
 
-                            {{ $user->phoneNumber }}
+                            {{ $data['user']->phoneNumber }}
                         </div>
                         <div class="mt-6 mb-2 font-light leading-relaxed text-base dark:text-white/80 text-slate-700">
                             <i class="mr-2 dark:text-white fas fa-envelope"></i>
-                            {{ $user->email }}
+                            {{ $data['user']->email }}
                         </div>
 
                     </div>

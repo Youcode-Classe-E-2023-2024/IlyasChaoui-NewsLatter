@@ -26,18 +26,16 @@ class MediasController extends Controller
      */
     public function showMedias(Request $request)
     {
-        $layout = 'layouts.dashboard-layout';
-        $medias = Medias::all();
-        $allUsers = User::all();
-        $roles = Role::all();
+        $data = [
+            'layout' => 'layouts.dashboard-layout',
+            'medias' => Medias::all(),
+            'allUsers' => User::all(),
+            'roles' => Role::all(),
+        ];
 
-        return view('Dashboard.dashboard', [
-            'medias' => $medias,
-            'layout' => $layout,
-            'allUsers' => $allUsers,
-            'roles' => $roles
-        ]);
+        return view('Dashboard.dashboard', compact('data'));
     }
+
 
     /**
      * Store a newly created resource in storage.

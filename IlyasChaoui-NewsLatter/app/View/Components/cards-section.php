@@ -11,9 +11,10 @@ class cards-section extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $mediasCount;
+    public function __construct($mediasCount)
     {
-        //
+        $this->mediasCount = $mediasCount;
     }
 
     /**

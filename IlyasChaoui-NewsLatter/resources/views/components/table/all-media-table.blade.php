@@ -50,6 +50,7 @@
                                                 class="mr-2 text-xs font-semibold leading-tight dark:text-white dark:opacity-60">{{ $mediaItem->created_at->toFormattedDateString() }}</span>
                                         </div>
                                     </td>
+                                    <td>
                                         <form action="{{ route('delete.media', ['id' => $mediaItem->id]) }}"
                                               method="post">
                                             @csrf
@@ -60,6 +61,7 @@
                                                         class="mr-2 far fa-trash-alt bg-150 bg-gradient-to-tl from-red-600 to-orange-600 bg-x-25 bg-clip-text"></i></a>
                                             </button>
                                         </form>
+                                    </td>
                                     </td>
                                 </tr>
                             @endforeach

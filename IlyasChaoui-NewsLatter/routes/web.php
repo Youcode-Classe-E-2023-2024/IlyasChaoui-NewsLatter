@@ -61,9 +61,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
         Route::post('/medias', [MediasController::class, 'store'])->name('media.upload');
         Route::post('/template', [NewsletterController::class, 'save'])->name('create.template');
-        Route::delete('/delete/media/{id}', [MediasController::class, 'delete'])->name('delete.media');
         Route::post('/template/send/{id}', [NewsletterController::class, 'send'])->name('send.mails');
+        Route::delete('/delete/media/{id}', [MediasController::class, 'delete'])->name('delete.media');
+        Route::post('/template/delete/{id}', [NewsletterController::class, 'delete'])->name('delete.mails');
         Route::post('/dashboard/update', [UserController::class, 'updateRole'])->name('update.role');
+        Route::delete('/delete/user/{id}', [UserController::class, 'delete'])->name('delete.user');
+        Route::delete('/delete/subscriber/{id}', [NewsletterEmailsController::class, 'delete'])->name('delete.subscriber');
 
     });
 

@@ -1,24 +1,24 @@
-@extends($layout)
+@extends($data['layout'])
 @section('main')
     @if(Request::url() === 'http://127.0.0.1:8000/dashboard')
         <!-- cards -->
-        <x-dashboard.cards-section :usersCount="$usersCount" :subscribeEmailsCount="$subscribeEmailsCount"/>
+        <x-dashboard.cards-section :data="$data"/>
         <!-- end cards -->
     @elseif(Request::url() === 'http://127.0.0.1:8000/table')
         <!-- start table -->
-        <x-Dashboard.tables :users="$users" :emails="$emails" :medias="$medias"/>
+        <x-Dashboard.tables :data="$data"/>
         <!-- end table -->
     @elseif(Request::url() === 'http://127.0.0.1:8000/medias')
         <!-- start table -->
-        <x-table.table-medias :medias="$medias"/>
+        <x-table.table-medias :data="$data"/>
         <!-- end table -->
     @elseif(Request::url() === 'http://127.0.0.1:8000/template')
         <!-- start table -->
-        <x-Dashboard.templates :newsletters="$newsletters" :medias="$medias"/>
+        <x-Dashboard.templates :data="$data"/>
         <!-- end table -->
     @else
         <!-- start profile -->
-        <x-dashboard.profile-section :user="$user"/>
+        <x-dashboard.profile-section :data="$data"/>
         <!-- end profile -->
     @endif
 @endsection
@@ -27,6 +27,7 @@
     <!--button of pemission manage -->
 
     @role('admin')
-    <x-sidebar.settings-sidebar :allUsers="$allUsers" :roles="$roles"/>
+        <x-sidebar.settings-sidebar :data="$data"/>
     @endrole
+
 @endsection

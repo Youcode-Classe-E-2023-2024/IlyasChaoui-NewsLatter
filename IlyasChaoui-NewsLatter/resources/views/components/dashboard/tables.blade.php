@@ -5,14 +5,14 @@
 <div class="w-full px-6 py-6 mx-auto">
     <!-- table 1 -->
 
-    <x-user-table :users="$users"/>
+    <x-user-table :users="$data['users']"/>
 
     <!-- card 2 -->
 
     <div class="flex  flex-col justify-between lg:flex-row">
-        <x-subscribe-table :emails="$emails"/>
+        <x-subscribe-table :emails="$data['emails']"/>
 
-        <x-all-media-table :medias="$medias"/>
+        <x-all-media-table :medias="$data['medias']"/>
     </div>
     <footer class="pt-4">
         <div class="w-full px-6 mx-auto">

@@ -36,8 +36,9 @@
                     </div>
                 </div>
             </div>
+
             <x-form.email-newsletter-form/>
-            <div class="-mx-4 flex flex-wrap">
+            <div class="-mx-4 flex flex-wrap" style="margin-top: 100px">
                 <div class="w-full px-4 md:w-1/2 lg:w-1/4">
                     <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
                         <div

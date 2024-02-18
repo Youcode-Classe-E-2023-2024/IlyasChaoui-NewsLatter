@@ -53,7 +53,8 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form class="p-4 md:p-5" action="{{ route('create.template') }}" method="post" enctype="multipart/form-data">
+            <form class="p-4 md:p-5" action="{{ route('create.template') }}" method="post"
+                  enctype="multipart/form-data">
                 @csrf
                 <div class="grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
@@ -63,40 +64,41 @@
                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                placeholder="Type product name" required="">
                     </div>
-                    <label for="media" class="mb-3 block text-base font-medium ">
-                        Media
-                    </label>
-                    <div class="rounded-md border border-[#e0e0e0] p-1 outline-none flex">
-                        <input type="text" id="selectedMedia" name="images" placeholder="Media"
-                               class="rounded w-full pb-2 py-2 px-3 placeholder-gray-500 outline-none"
-                               style="width: 35rem;">
-                        <div
-                            class="absolute max-h-40 mt-12 z-10 mt-2 bg-white border border-gray-300 rounded-md shadow-lg  hidden"
-                            id="dropdownContent">
-                            @foreach ($medias as $media)
-                                @foreach ($media->getMedia() as $mediaItem)
-                                    <div class="title bg-gray-100 border p-2 border-gray-300 w-full outline-none">
-                                        <label>
-                                            @if ($mediaItem->type == 'image')
-                                                <img src="{{ $mediaItem->getUrl() }}" alt='{{ $mediaItem->name }}'
-                                                     class="h-20 w-full object-cover object-center inline-block mr-2"
-                                                     onclick="selectMedia('{{ $mediaItem->getUrl() }}')">
-                                            @elseif($mediaItem->type == 'video')
-                                                <video controls class="h-24 w-full"
-                                                       onclick="selectMedia('{{ $mediaItem->getUrl() }}')">
-                                                    <source src="{{ $mediaItem->getUrl() }}" type="video/mp4">
-                                                </video>
-                                            @endif
-                                        </label>
-                                    </div>
+                    <div class="flex flex-col">
+                        <label for="media" class="mb-3 block text-base font-medium ">
+                            Media
+                        </label>
+                        <div class="rounded-md border border-[#e0e0e0] p-1 outline-none flex">
+                            <input type="text" id="selectedMedia" name="images" placeholder="Media"
+                                   class="rounded w-full pb-2 py-2 px-3 placeholder-gray-500 outline-none"
+                                   style="width: 35rem;">
+                            <div
+                                class="absolute max-h-40 mt-12 z-10 mt-2 bg-white border border-gray-300 rounded-md shadow-lg  hidden"
+                                id="dropdownContent">
+                                @foreach ($data['medias'] as $media)
+                                    @foreach ($media->getMedia() as $mediaItem)
+                                        <div class="title bg-gray-100 border p-2 border-gray-300 w-full outline-none">
+                                            <label>
+                                                @if ($mediaItem->type == 'image')
+                                                    <img src="{{ $mediaItem->getUrl() }}" alt='{{ $mediaItem->name }}'
+                                                         class="h-20 w-full object-cover object-center inline-block mr-2"
+                                                         onclick="selectMedia('{{ $mediaItem->getUrl() }}')">
+                                                @elseif($mediaItem->type == 'video')
+                                                    <video controls class="h-24 w-full"
+                                                           onclick="selectMedia('{{ $mediaItem->getUrl() }}')">
+                                                        <source src="{{ $mediaItem->getUrl() }}" type="video/mp4">
+                                                    </video>
+                                                @endif
+                                            </label>
+                                        </div>
+                                    @endforeach
                                 @endforeach
-                            @endforeach
-                        </div>
-                        <div class="m-2">
-                            <button type="button" onclick="toggleDropdown()">^_^</button>
+                            </div>
+                            <div class="m-2">
+                                <button type="button" onclick="toggleDropdown()">^_^</button>
+                            </div>
                         </div>
                     </div>
-
                     <div class="col-span-2">
                         <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
                             Description</label>
@@ -126,28 +128,60 @@
             <div class="max-w-full px-3 md:w-11/12 lg:ml-12 lg:w-8/12">
                 <!-- Start the flex container for cards here -->
                 <div class="grid grid-cols-4 gap-4 mt-6 mx-3">
-                    @foreach($newsletters as $newsletter)
+                    @foreach($data['newsletters'] as $newsletter)
                         <div
-                            class="transform transition duration-300 hover:scale-110 rounded-lg shadow-lg h-56 hover:shadow-xl bg-white"
-                        >
+                            class="transform transition duration-300 hover:scale-110 rounded-lg shadow-lg h-56 hover:shadow-xl bg-white">
                             <div
-                                class="bg-gradient-to-br from-rose-100 via-purple-200 to-purple-200 m-2 h-3/6 rounded-lg"
-                            ></div>
+                                class="bg-gradient-to-br from-rose-100 via-purple-200 to-purple-200 m-2 h-3/6 rounded-lg">
+                                <div x-data="{ isOpen: false }" class="relative inline-block ">
+                                    <!-- Dropdown toggle button -->
+                                    <button @click="isOpen = !isOpen"
+                                            class="relative right-0 z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+                                            style="    left: 118px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20"
+                                             fill="currentColor">
+                                            <path
+                                                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+
+                                    <!-- Dropdown menu -->
+                                    <div x-show="isOpen"
+                                         @click.away="isOpen = false"
+                                         x-transition:enter="transition ease-out duration-100"
+                                         x-transition:enter-start="opacity-0 scale-90"
+                                         x-transition:enter-end="opacity-100 scale-100"
+                                         x-transition:leave="transition ease-in duration-100"
+                                         x-transition:leave-start="opacity-100 scale-100"
+                                         x-transition:leave-end="opacity-0 scale-90"
+                                         class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
+                                         style="    right: -120px;
+"
+                                    >
+                                        <form action="{{ route('send.mails', ['id' => $newsletter->id]) }}" method="post" class="hover:bg-gray-200">
+                                            @csrf
+                                            <button class="bg-transparent  flex flex-row cursor-pointer font-medium text-black px-2 py-1 mt-2 rounded-md transition duration-150" type="submit">
+                                                <svg class="w-5 h-5 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h18a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2zm3.828 4.828a3 3 0 104.243 4.243L12 13l.929-.929a3 3 0 00-4.242-4.243z"></path></svg>
+                                                Send
+                                            </button>
+                                        </form>
+                                        <form action="{{ route('delete.mails', ['id' => $newsletter->id]) }}" method="post" class="hover:bg-gray-200">
+                                            @csrf
+                                            <button class="bg-transparent cursor-pointer flex flex-row font-medium text-red-500 px-2 py-1 mt-2 rounded-md transition duration-150" type="submit">
+                                                <svg class="w-5 h-5 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                                Delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="px-5 pt-2 flex flex-col">
                                 <div class="flex flex-col">
                                     <h2 class="font-extrabold">{{ $newsletter->titre }}</h2>
                                 </div>
                                 @hasanyrole('admin|editor')
-                                <form action="{{ route('send.mails', ['id' => $newsletter->id]) }}" method="post">
-                                    @csrf
-                                    <button
-                                        class="bg-blue-500 cursor-pointer text-white px-2 py-1 mt-2 rounded-md transition duration-150 hover:bg-blue-700"
-                                        type="submit"
-                                    >
-                                        Send
-                                    </button>
-                                </form>
+
                                 @endhasanyrole
                             </div>
                         </div>

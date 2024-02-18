@@ -34,7 +34,9 @@
                 <!-- Modal body -->
                 <!-- component -->
                 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-                <div class="relative flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center" style="height: 600px">
+                <div
+                    class="relative flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
+                    style="height: 600px">
                     <div class="absolute bg-white inset-0 z-0"></div>
                     <div class="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
                         <div class="text-center">
@@ -43,20 +45,29 @@
                             </h2>
                             <p class="mt-2 text-sm text-gray-400">Lorem ipsum is placeholder text.</p>
                         </div>
-                        <form class="mt-8 space-y-3" action="{{ route('media.upload') }}" method="POST" enctype="multipart/form-data">
+                        <form class="mt-8 space-y-3" action="{{ route('media.upload') }}" method="POST"
+                              enctype="multipart/form-data">
                             @csrf
                             <div class="grid grid-cols-1 space-y-2">
                                 <label class="text-sm font-bold text-gray-500 tracking-wide">Attach Document</label>
                                 <div class="flex items-center justify-center w-full">
-                                    <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
-                                        <div class="h-full w-full text-center flex flex-col items-center justify-center items-center  ">
+                                    <label
+                                        class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
+                                        <div
+                                            class="h-full w-full text-center flex flex-col items-center justify-center items-center  ">
                                             <!---<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-400 group-hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                                             </svg>-->
                                             <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
-                                                <img class="has-mask h-36 object-center" src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg" alt="freepik image">
+                                                <img class="has-mask h-36 object-center"
+                                                     src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg"
+                                                     alt="freepik image">
                                             </div>
-                                            <p class="pointer-none text-gray-500 "><span class="text-sm">Drag and drop</span> files here <br /> or <a href="" id="" class="text-blue-600 hover:underline">select a file</a> from your computer</p>
+                                            <p class="pointer-none text-gray-500 "><span
+                                                    class="text-sm">Drag and drop</span> files here <br/> or <a href=""
+                                                                                                                id=""
+                                                                                                                class="text-blue-600 hover:underline">select
+                                                    a file</a> from your computer</p>
                                         </div>
                                         <input type="file" class="hidden" name="image">
                                     </label>
@@ -85,7 +96,9 @@
         </div>
     </div>
 </div>
-<div class="rounded-full py-1 ml-6 px-4 font-medium text-xl border bg-white dark:text-white dark:bg-gray-700 border-gray-300" style="width: fit-content">
+<div
+    class="rounded-full py-1 ml-6 px-4 font-medium text-xl border bg-white dark:text-white dark:bg-gray-700 border-gray-300"
+    style="width: fit-content">
     All Images
 </div>
 
@@ -93,7 +106,7 @@
     <!-- content -->
     <div class="w-full max-w-full px-3 xl:w-1/2 xl:flex-none">
         <div class="flex gap-[30px] -mx-3">
-            @foreach ($medias as $media)
+            @foreach ($data['medias'] as $media)
                 @foreach ($media->getMedia() as $mediaItem)
                     @if ($mediaItem->type == 'image')
                         <div
@@ -122,9 +135,9 @@
 </div>
 <div class="w-full overflow-y-auto px-6 py-6 mx-auto">
     <!-- content -->
-    <div class="w-full max-w-full px-3 xl:w-1/2 xl:flex-none">d
+    <div class="w-full max-w-full px-3 xl:w-1/2 xl:flex-none">
         <div class="flex gap-[30px] -mx-3">
-            @foreach ($medias as $media)
+            @foreach ($data['medias'] as $media)
                 @foreach ($media->getMedia() as $mediaItem)
                     @if ($mediaItem->type == 'video')
 
@@ -155,7 +168,7 @@
     <!-- content -->
     <div class="w-full max-w-full px-3 xl:w-1/2 xl:flex-none">
         <div class="flex gap-[30px] -mx-3">
-            @foreach ($medias as $media)
+            @foreach ($data['medias'] as $media)
                 @foreach ($media->getMedia() as $mediaItem)
                     @if ($mediaItem->type == 'pdf')
                         <div class="card">
