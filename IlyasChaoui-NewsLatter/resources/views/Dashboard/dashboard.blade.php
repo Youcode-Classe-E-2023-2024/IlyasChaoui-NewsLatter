@@ -6,7 +6,7 @@
         <!-- end cards -->
     @elseif(Request::url() === 'http://127.0.0.1:8000/table')
         <!-- start table -->
-        <x-Dashboard.tables :data="$data"/>
+        <x-dashboard.tables :data="$data"/>
         <!-- end table -->
     @elseif(Request::url() === 'http://127.0.0.1:8000/medias')
         <!-- start table -->

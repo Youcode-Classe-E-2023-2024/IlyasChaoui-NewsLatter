@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('emaillists', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->enum('unsub', ['sub'])->default('sub');
+            $table->enum('status', ['sub', 'unsub'])->default('sub');
             $table->timestamps();
         });
     }

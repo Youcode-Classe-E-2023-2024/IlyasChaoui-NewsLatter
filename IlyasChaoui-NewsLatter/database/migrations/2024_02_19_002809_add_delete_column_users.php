@@ -9,11 +9,10 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::table('emaillists', function (Blueprint $table) {
-            $table->dropColumn('unsub');
-            $table->enum('status', ['sub', 'unsub'])->default('sub');
+        Schema::table('users', function (Blueprint $table){
+           $table->softDeletes();
         });
     }
 
@@ -22,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('users', function (Blueprint $table){
+            $table->dropSoftDeletes();
+        });
     }
 };

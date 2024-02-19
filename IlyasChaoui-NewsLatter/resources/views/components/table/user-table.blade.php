@@ -2,7 +2,7 @@
 <div class="flex flex-wrap -mx-3">
     <div class="flex-none w-full max-w-full px-3">
         <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
-            <div class="flex-auto px-0 pt-0 pb-2">
+            <div class="flex justify-between px-0 pt-0 pb-2">
                 <div class="p-0 overflow-x-auto">
                     <table class="items-center w-full mb-0 align-top border-collapse dark:border-white/40 text-slate-500">
                         <thead class="align-bottom">
@@ -36,6 +36,7 @@
                                 <td class="p-2 text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
                                     <span class="text-xs font-semibold leading-tight dark:text-white dark:opacity-80 text-slate-400">{{ $user->phoneNumber }}</span>
                                 </td>
+                                @role('admin')
                                 <td class="p-2 align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
                                     <form action="{{ route('delete.user', ['id' => $user->id]) }}" method="post">
                                         @csrf
@@ -46,6 +47,7 @@
                                         </button>
                                     </form>
                                 </td>
+                                @endrole
                             </tr>
                         @endforeach
                         </tbody>

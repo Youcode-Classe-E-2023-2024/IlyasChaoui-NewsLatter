@@ -56,7 +56,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard/changeRole', [DashboardController::class, 'changeRole'])->name('change.role');
     });
 
-    Route::middleware(['role:admin,editor'])->group(function () {
+    Route::middleware((['role:admin|editor']))->group(function () {
 
         Route::get('/table', [UserController::class, 'showUserTable'])->name('Dashboard.table');
         Route::post('/medias', [MediasController::class, 'store'])->name('media.upload');
@@ -67,7 +67,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/dashboard/update', [UserController::class, 'updateRole'])->name('update.role');
         Route::delete('/delete/user/{id}', [UserController::class, 'delete'])->name('delete.user');
         Route::delete('/delete/subscriber/{id}', [NewsletterEmailsController::class, 'delete'])->name('delete.subscriber');
-
+        Route::patch('/users/restore/{id}', [UserController::class,'restore'])->name('users.restore');
     });
 
 });

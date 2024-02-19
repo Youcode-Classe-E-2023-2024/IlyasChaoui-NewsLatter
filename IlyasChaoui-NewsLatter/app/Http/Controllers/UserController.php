@@ -40,6 +40,7 @@ class UserController extends Controller
     {
         $data = [
             'layout' => 'layouts.dashboard-layout',
+            'deletedUsers' => User::onlyTrashed()->paginate(6, ['*'], 'deletedUsers'),
             'users' => User::paginate(6, ['*'], 'users'),
             'emails' => Emaillist::paginate(6, ['*'], 'emails'),
             'medias' => Medias::paginate(6, ['*'], 'medias'),
@@ -96,14 +97,24 @@ class UserController extends Controller
 
 //        dd("success");
     }
+    /**
+     * Restore the specified soft-deleted resource.
+     *
+     * @param  int  $id
+     */
+    public function restore($id)
+    {
+        $user = User::onlyTrashed()->findOrFail($id);
+        $user->restore();
+
+        return redirect()->back()->with('success', 'User restored successfully.');
+    }
+
+
     public function delete($id)
     {
-        // Find the media by its ID
-        $user = User::findOrFail($id);
-        if (!$user) {
-            return redirect()->back()->with('error', 'Media not found.');
-        }
-        $user->delete();
-        return redirect()->back()->with('success', 'Template deleted successfulnesses.');
+        User::find($id)->delete();
+
+        return redirect()->back()->with('success', 'User deleted successfully.');
     }
 }
