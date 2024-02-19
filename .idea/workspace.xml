@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3e8244-c6fd-451e-87ca-e9e42dedaaac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_135945_create_emaillists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_08_135945_create_emaillists_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/database/migrations/2024_02_15_161044_add_status_column_emaillists.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/Dashboard/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/tables.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/dashboard/tables.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/all-media-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/all-media-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/subscribe-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/subscribe-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/user-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/resources/views/components/table/user-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/IlyasChaoui-NewsLatter/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="1f3e8244-c6fd-451e-87ca-e9e42dedaaac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +208,7 @@
       <workItem from="1708109962390" duration="3123000" />
       <workItem from="1708195762560" duration="21071000" />
       <workItem from="1708286671688" duration="3225000" />
-      <workItem from="1708301227824" duration="8671000" />
+      <workItem from="1708301227824" duration="9105000" />
     </task>
     <servers />
   </component>
